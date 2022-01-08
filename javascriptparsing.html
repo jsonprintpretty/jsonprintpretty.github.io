@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Javascript Parsing Json - Print Pretty</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+      	<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128394489-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-128394489-1');
+        </script>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">Json/Xml Print Pretty</a>
+				<!--<nav class="right">
+					<a href="#" class="button alt">Log in</a>
+				</nav>-->
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<!--
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>-->
+				</ul>
+				<!--<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul> -->
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper" >
+				<div class="inner">
+					<header class="align-center">
+						<h1>Parsing/Building JSON in Javascript</h1>
+						<p>Example for building/parsing JSON in Javascript</p>
+					</header>
+					<!--<div class="image fit">
+						<img src="images/pic05.jpg" alt="" />
+					</div>-->
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+					Below example illustrate the client side building and parsing of JSON Object using Javascript code., <br/>
+					A JSON format String needs to be created for field and value, and we can convert the String to JSON Object.<br/>
+					All current browsers have built in JSON support to create a native JSON Object.<br/>
+					
+					<h2>Building JSON Object in Javascript:</h2>
+					<br/>	
+					<pre>
+					<code style="font-size:14px;">
+&lt;html&gt;
+&lt;body&gt;
+&lt;h2&gt;Building JSON Object from JSON String.&lt;/h2&gt;
+&lt;p id="jsonObj"&gt;&lt;/p&gt;
+&lt;script&gt;
+    var objStr = { names      : "testjsonuser", 
+	           actions    : "IllustrateJSONObjectInScript",
+	           logincount : 2 
+                 };
+				  
+    var jsonObject = JSON.stringify(objStr);
+    document.getElementById("jsonObj").innerHTML = jsonObject;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/code&gt;
+					</code>
+					</pre>
+					<h3>Result:</h3>
+					<!--Building JSON Object from JSON String.-->
+					<code>	
+					{"names":"testjsonuser","actions":"IllustrateJSONObjectInScript","logincount":2}
+					</code>
+					<br/><br/>
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+					We could see the result displays the JSON Object., and it has string field printed with double quotes.<br/>
+					The java Object is created with only name value pairs in objStr field.
+					Then the string value is converted to JSON Object., and printed in paragraph Element Object
+					</p>
+					<h2>Parsing JSON Object in Javascript</h2>
+
+					
+					<pre>
+						<code style="font-size:14px;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Parsing JSON Object In Javascript&lt;/h2&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+   var objStr = { names      : "testjsonuser2", 
+	          actions    : "IllustrateJSONObjectInScript",
+	          logincount : 2 
+                };
+				  
+   var jsonObject = JSON.stringify(objStr);s
+		                  
+    // Parsing JSON Object in Javascript..,                  
+   var obj = JSON.parse(jsonObject);
+   document.getElementById("demo").innerHTML = "names:" + obj.names + ",actions: " + obj.actions + ",logincount: " + obj.logincount;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+						</code>
+					</pre>	
+
+					<h3>Result:</h3>
+
+					<code>names:testjsonuser2,actions: IllustrateJSONObjectInScript,logincount: 2</code>
+					<br/><br/>
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+					The JSON Object created can be parsed using the field name present in JSON Object.<br/>
+					The "names", "actions" and "logincount" values is displayed by parsing the object jsonObject.
+					</p>
+					
+						
+					</p>	
+					
+					
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<!--<li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>-->
+						<li><span class="icon fa-envelope"></span> <a href="#">jsonprintpretty@gmail.com</a></li>
+						<!--<li><span class="icon fa-map-marker"></span></li>-->
+					</ul>
+				</div>
+				<div class="copyright" style="font-size:16px;">
+					&copy; 2018 By <b>jsonprintpretty.com</b><!-- <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.-->
+				    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+				</div>
+			</footer>index.html
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
