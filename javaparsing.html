@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Java Parsing Json - Print Pretty</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128394489-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-128394489-1');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2350870995422766"
+     crossorigin="anonymous"></script>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">Json/Xml Print Pretty</a>
+				<!--<nav class="right">
+					<a href="#" class="button alt">Log in</a>
+				</nav>-->
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<!--
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>-->
+				</ul>
+				<!--<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul> -->
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper" >
+				<div class="inner">
+					<header class="align-center">
+						<h1>Parsing/Building JSON in Java</h1>
+						<p>Example for building/parsing JSON in JAVA</p>
+					</header>
+					<!--<div class="image fit">
+						<img src="images/pic05.jpg" alt="" />
+					</div>-->
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+						A JSON Object can be created using Java very easily using any JSON library.<br/>
+						We are using JSON-Simple.jar to build/parse the JSON Object using Java.
+					
+					<h2>Building JSON Object in JAVA:</h2>
+					<br/>	
+					<pre>
+					<code style="font-size:14px;">
+import org.json.simple.JSONObject;
+
+class JSONBuilder {
+
+   public static void main(String[] args){
+      JSONObject jsonObject = new JSONObject();
+
+      jsonObject.put("names", "testjsonuser3");
+      jsonObject.put("action", "IllustrateJSONObjectInScript");
+      jsonObject.put("logincount", "3");
+      
+      System.out.print(jsonObject);
+   }
+}
+					</code>
+					</pre>
+					<h3>Result:</h3>
+					<!--Building JSON Object from JSON String.-->
+					<code>	
+					{"names":"testjsonuser3","actions":"IllustrateJSONObjectInScript","logincount":3}
+					</code>
+					<br/><br/>
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+					We could see the result displays the JSON Object., and it has string field printed with double quotes.<br/>
+					The java Object is created with only name value pairs in jsonObject field.
+					</p>
+					<h2>Parsing JSON Object in JAVA</h2>
+
+					
+					<pre>
+						<code style="font-size:14px;">
+import org.json.simple.JSONObject;
+
+class JSONBuilder {
+
+   public static void main(String[] args){
+      JSONObject jsonObject = new JSONObject();
+
+      jsonObject.put("names", "testjsonuser3");
+      jsonObject.put("actions", "IllustrateJSONObjectInScript");
+      jsonObject.put("logincount", "3");
+      
+      System.out.print(jsonObject);
+	  
+	  StringWriter out = new StringWriter();
+	  jsonObject.writeJSONString(out);
+      
+	  String jsonString = out.toString();
+	  System.out.println("JSON Converted to String:");
+	  System.out.print(jsonString);
+	  
+	  System.out.println("JSONObject Values:");
+	  System.out.print("names:" + jsonObject.get("names"));
+  	  System.out.print(",actions:" + jsonObject.get("actions"));
+  	  System.out.print(",logincount:" + jsonObject.get("logincount"));
+   
+   }
+}
+		</code>
+					</pre>	
+
+					<h3>Result:</h3>
+					<pre>
+					<code>
+JSON Converted to String:						
+{"names": "testjsonuser3", "actions":"IllustrateJSONObjectInScript", "logincount":3}						
+JSONObject Values:
+names:testjsonuser3,actions: IllustrateJSONObjectInScript,logincount: 3
+					</code>
+					</pre>
+					<br/><br/>
+					<p style="font-family:Montserrat,sans-serif;font-size:14px;">
+					In Java, JSON object can be directly converted to String and we can do String manipulations.
+					Also, the JSON Object created can be parsed using the field name present in JSON Object.<br/>
+					The "names", "actions" and "logincount" values is displayed by parsing the object jsonObject directly in java 
+					as explained..
+					</p>
+					<br/>
+                    <br/>
+                    <p><strong>Reference &nbsp;:</strong>&nbsp;&nbsp;<a href="https://tutorialflow.com">https://tutorialflow.com</a></p>
+						
+					
+					
+					
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<!--<li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>-->
+						<li><span class="icon fa-envelope"></span> <a href="#">jsonprintpretty@gmail.com</a></li>
+						<!--<li><span class="icon fa-map-marker"></span></li>-->
+					</ul>
+				</div>
+				<div class="copyright" style="font-size:16px;">
+					&copy; 2018 By <b>jsonprintpretty.com</b><!-- <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.-->
+				    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

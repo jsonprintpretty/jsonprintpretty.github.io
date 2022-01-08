@@ -1,3 +1,346 @@
-<html>
-  <h1> * JSON Print Pretty to format all the XMLs/JSON Online Securely</h1>
-</html>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>JSONPrintPretty | JSON Formatter/Print Pretty/Validator/Minifier</title>
+
+<link rel="author" href="https://plus.google.com/communities/116375146543103112210/"/>
+<meta name="description" content="Online JSON Formatter, JSON Validator formats JSON data, XML data, and helps to validate JSON data, and validate XML data"/>
+<meta name="keywords" content="json, open source, , parser, json editor, json editor online, online json editor, javascript, javascript object notation, tools, tool, json tools, treeview,  free, json parser, json parser online, json formatter, editor, formatter, online, format, online json parser, format json online, json formatter online, online json formatter">
+<meta name="author" content="karthick">
+<link rel="canonical" href="http://jsonprintpretty.com/" />
+<meta property="og:title" content="JSONPrintPretty | JSON Formatter/Print Pretty/Validator/Minifier"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://jsonprintpretty.com/"/>
+<meta property="og:image" content="http://jsonprintpretty.com/images/jsonprintprettylogo.png"/>
+<meta property="og:site_name" content="JsonPrintPretty" />
+<meta property="og:description" content="Online JSON Formatter, JSON Validator formats JSON data, XML data, and helps to validate JSON data, and validate XML data" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@jsonprintpretty" />
+<meta name="twitter:domain" content="www.jsonprintpretty.com" />
+<meta name="twitter:title" content="JSONPrintPretty | JSON Formatter/Print Pretty/Validator/Minifier" />
+<meta name="twitter:description" content="Online JSON Formatter, JSON Validator formats JSON data, XML data, and helps to validate JSON data, and validate XML data"/>
+<meta name="twitter:image" content="http://jsonprintpretty.com/images/jsonprintprettylogo.png" />
+  
+<link rel="stylesheet" href="assets/css/main.css"/>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"/>
+<link href="assets/linecss/linedTextEditor-jquery.css" type="text/css" rel="stylesheet" />
+  
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="assets/linejs/linedTextEditor-jquery.js"></script>
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128394489-1"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3312135639081405"
+     crossorigin="anonymous"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128394489-1');
+</script>
+
+    <style>
+    html { min-height:100vh;}
+    body { font-family:'Orbitron'; background-color:#fafafa;}
+    </style>
+	
+	<style>
+		body { font-size:14x;}
+		textarea {background:#34495E; color:#fff; padding:20px; width:100%;}
+
+		/* Create three equal columns that floats next to each other */
+		.column1 {
+			flex: 1;
+			float: center;
+			width: 40%;
+			padding: 10px 10px 10px 40px;
+			height: 600px; /* Should be removed. Only for index.htmlnstration */
+		}
+		.column2 {
+			flex: 1;
+			float: center;
+			width: 15%;
+			padding: 10px 10px 10px 10px;
+			height: 600px; /* Should be removed. Only for demonstration */
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.column3 {
+			flex: 1;
+			float: center;
+			width: 40%;
+			padding: 10px 10px 10px 40px;
+			height: 600px; /* Should be removed. Only for demonstration */
+		}
+		
+		@media screen and (max-width: 960px) {
+		    .column1{ float: none; width: 100%; }
+		    .column2{ float: none; width: 100%; }
+		    .column3{ display: block; width: 100%; }
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			text-align: center;
+			clear: both;
+		
+		}
+ 	    pre { }
+		.string { color: yellow; }
+		.number { color: red; }
+		.boolean { color: gray; }
+		.null { color: magenta; }
+		.key { color: darkorange; }
+	</style>
+	<script src="myjs/helperv9.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+		<header id="header">
+			<nav class="left">
+				<a href="#menu"><span>Menu</span></a>
+			</nav>
+            <h1><div style="font-size:16px;"><a href="index.html" class="logo">Json/Xml Print Pretty</a></div></h1>
+            <h2>
+              <div style="margin:-30px;font-family:Montserrat,sans-serif;font-size:10px;">Simple Online Tool to Validate, Format, Minify and Pretty print JSON
+              </div>
+            </h2>
+		</header>
+  
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+                    <li><a href="javascriptparsing.html">Javascript Parsing/Building</a></li>
+                    <li><a href="phpscriptparsing.html">PHP Parsing/Building</a></li>
+					<li><a href="javaparsing.html">Java Parsing/Building</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		
+  			<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+						<div class="row">
+							<div class="column1" style="display: inline-block">
+							  <div style="width: 100%;height:100%;margin: auto">
+								  <pre class="lined" style="background:#34495E;color:#fff;text-align:left;"  id="sourceareapre">{"test_number":123456, "test_string":"mystring"}</pre>
+							  </div>
+    						</div>
+							<div class="column2" style="display: inline-block;">
+								<ul class="actions">
+									<div style="vertical-align:middle">
+										<br/><br/><br/>
+										<li><a href="#" class="button equal" style="width:200px;" onclick="validateJSON()">Validate JSON</a></li>
+										<li><a href="#" class="button equal" style="width:200px;" onclick="validateJSON()">JSON Pretty </a></li>
+										<li><a href="#" class="button equal" style="width:200px;" onclick="minifyJSON()">JSON Minify</a></li>
+										<li><a href="#" class="button equal" style="width:200px;" onclick="validateXML()">Validate XML</a></li>
+										<li><a href="#" class="button equal" style="width:200px;" onclick="validateXML()">XML Pretty </a></li>
+										<li style="padding-right:14px"><a href="#" class="button equal" style="width:200px;" onclick="minifyXML()">XML Minify</a></li>
+									</div>
+								</ul>
+							</div>
+							<div class="column3" style="display: inline-block">
+							    <div style="width: 100%;margin: auto">
+							        <pre class="lined" style="background:#34495E;color:#fff;text-align:left;" id="targetareapre"></pre>
+							    </div>
+							</div>
+						</div>
+					    <script>
+					        $(function() {
+					            $(".lined").linedTextEditor();
+					        });
+					    </script>
+				</div> 
+			 </section>
+
+             <!-- One -->
+             <section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item left">
+						<div>
+							<h3>JSON Print Pretty Tool</h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">JSONPrettyPrint is a Online Tool to validate, format, minify and pretty print the JSON data.</p>
+						</div>
+						<div>
+							<h3>Compatibility</h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">It works on all the browsers like Chrome, Mozilla, Safari, Edge, Windows, Linux, Solaris flavours and Mac.</p><br/>
+						</div>
+					</div>
+                   
+                    
+                  
+                    <div class="flex-item right">
+						<div>
+							<h3>Usage</h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">Place your JSON in the left side source text area and perform the function by using the corresponding buttons.</p><br/>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">Data will be validated/formatted or minified and presented in the target text area right side.</p>
+						</div>
+						<div>
+							<h3>No Data Storage</h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">This tool does not store any JSON data on server, and hence the data is secure with the user.</p>
+							<br/><p style="font-family:Montserrat,sans-serif;font-size:12px;">No User login required to perform the operations.</p>
+						</div>
+					</div>
+				</div>
+			</section>	
+            <section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+                    <script type="text/javascript" language="javascript">
+                    var aax_size='728x90';
+                    var aax_pubname = 'karthickd28-21';
+                    var aax_src='302';
+                    </script>
+                    <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
+				</div>
+            </section>
+			
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+                <div class="inner">
+					<h2>Sample JSON with JSON Object and JSON Arrays</h2>
+					<figure>
+					    <!--<blockquote>-->
+					          <div style="white-space: pre-wrap;text-align:left;background: white;color:black;font-size:18px;font-family: Palatino, seri;line-height:1.2em;">
+								  {
+									 "shiporder":
+									  {
+										  <span style="color:black">"orderperson":</span> <span style="color:red">"John Smith"</span>,
+										  <span style="color:black">"shipto":</span> 
+										  {
+											  <span style="color:black">"name":</span> <span style="color:red">"Ola Nordmann"</span>,
+											  <span style="color:black">"address":</span> <span style="color:red">"Langgt 23"</span>,
+											  <span style="color:black">"city":</span> <span style="color:red">"4000 Stavanger"</span>,
+											  <span style="color:black">"country":</span><span style="color:red">"Norway"</span>
+										  },
+										  <span class="key1">"item":</span> 
+										  [
+											  {
+												  <span style="color:black">"title":</span> <span style="color:red">"Empire Burlesque"</span>,
+												  <span style="color:black">"note":</span> <span style="color:red">"Special Edition"</span>,
+												  <span style="color:black">"quantity":</span> <span style="color:red">"1"</span>,
+												  <span style="color:black">"price":</span> <span style="color:red">"10.90"</span>
+											  },
+											  {
+												  <span class="key1">"title":</span><span style="color:red">"Hide your heart"</span>,
+												  <span class="key1">"quantity":</span> <span style="color:red">"1"</span>,
+												  <span class="key1">"price":</span> <span style="color:red">"9.90"</span>
+											  }
+										  ]
+									  }
+								  }
+							  </div>
+							<br/>
+							<br/>
+							
+					    <!--</blockquote>-->
+					    <footer>
+							<cite class="author" style="text-align:left;font-family:Montserrat,sans-serif;line-height:2.5em;">In the above JSON Message, </cite>
+					        <cite class="author" style="text-align:left;font-family:Montserrat,sans-serif;line-height:2.5em;">JSON Object usually starts with "{".,e.g., "orderperson" is a JSON object, and also "shipto" is a JSON Object, which in turn contains further JSON Objects.<br/> Each name is followed by : and the name/value pairs are separated by , (comma). 
+							</cite>
+					        <cite class="author" style="text-align:left;font-family:Montserrat,sans-serif;line-height:2.5em;">JSON Array usually starts with the syntax of "[", e.g., "item" is a JSON Array, and contains group of objects like title, note, quantity and price.</cite>
+						    <cite class="author" style="text-align:left;font-family:Montserrat,sans-serif;line-height:2.5em;">
+									Like any technology like Java/PHP/Perl etc., has different data types, JSON accepts different data types.<br/>
+                             	<u> Different Data Types:</u><br/>
+								<div style="font-size:12px">String</div>
+								<div style="white-space: pre-wrap;text-align:left;background: white;color:black;font-size:18px;font-family: Palatino, seri;line-height:1.2em;">
+									{"name": "testuser"}
+								</div>
+								<div style="font-size:12px">Number(accepts Integer, Short, Long, Decimal etc.,)</div>
+								<div style="white-space: pre-wrap;text-align:left;background: white;color:black;font-size:18px;font-family: Palatino, seri;line-height:1.2em;">
+									  {
+									  "numberexample" :
+														  {
+																	"logincount": <span style="color:red">2</span>,
+																	"testpassed":<span style="color:red">4</span>,
+																	"moneyvalue": <span style="color:red">93.2</span>
+														  }
+									  }
+								</div>
+								<div style="font-size:12px">Date Format</div>
+								<div style="white-space: pre-wrap;text-align:left;background: white;color:black;font-size:18px;font-family: Palatino, seri;line-height:1.2em;">
+									  {
+									  "firstdayofayear": <span style="color:red">"2018-01-01T01:02:56.310-10:00"</span>
+									  }
+								</div>
+								<div style="font-size:12px">Boolean (true or false)</div>
+								<div style="white-space: pre-wrap;text-align:left;background: white;color:black;font-size:18px;font-family: Palatino, seri;line-height:1.2em;">
+									  {
+												"isAvailable" :<span style="color:red">true</span>
+									  }
+								</div>
+						  </cite>
+					   </footer>
+					</figure>
+				</div>
+               
+              
+             
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item box">
+						<!--<div class="image fit">
+							<img src="images/pic02.jpg" alt="" />
+						</div>-->
+						<div class="content" style="line-height:40px;">
+							<h3><a href="javascriptparsing.html" class="logo">Parsing/Building In Javacript</a></h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">Below example illustrate the client side building and parsing of JSON Object using Javascript code., A JSON format String needs to be created for field and............ 
+								<a href="javascriptparsing.html" class="logo">...more</a>
+								</p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="content" style="line-height:40px;">
+							<h3><a href="phpscriptparsing.html" class="logo">Parsing/Building In Php</a></h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">The following illustrate the  building and parsing of JSON Object using Php code., <br/>PHP has a inbuilt library function [json_encode] to convert PHP object to a JSON Object.......
+							<a href="phpscriptparsing.html" class="logo">...more</a></p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="content" style="line-height:40px;">
+							<h3><a href="javaparsing.html" class="logo">Parsing/Building In Java</a></h3>
+							<p style="font-family:Montserrat,sans-serif;font-size:12px;">The following illustrate the  building and parsing of JSON Object using Java code., <br/>We can use any JSON library to create a JSONObject and parse the JSON Object.........
+							<a href="javaparsing.html" class="logo">...more</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+  			<!-- Footer -->
+  			<footer id="footer">
+				<div class="inner">
+							<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-envelope"></span> <a href="#">jsonprintpretty@gmail.com</a></li>
+					</ul>
+				</div>
+				<p style="font-family:Montserrat,sans-serif;font-size:12px;">
+				Note: This tool does not store any input JSON/XML data in server, so that you can validate XML/JSON online without any security issues.</p> 			
+				<div class="copyright" style="font-size:16px;">
+					&copy; 2018 By <b>jsonprintpretty.com</b>
+				    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="privacypolicy.html">Privacy Policy</a>
+                    &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;<a href="https://tutorialflow.com"><span style="color:blue">https://www.tutorialflow.com</span></a>
+				</div>
+               	</footer>
+
+  		<!-- Scripts -->
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+</body>
+</html>																	
+
